@@ -1,0 +1,269 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(255, 255, 255);
+   
+     
+      
+}
+
+@import "partials/navBar";
+ 
+   //HomeSection
+ .section{
+  padding: 3vw;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    height: 40vh;
+    width: 90vw;
+   
+    .col1{
+        width: 50vw;
+        margin-top: 0;
+      padding-left: 100px;
+      padding-top: -100px;
+      padding-right: 1em;
+       
+     }
+     .col2{
+      width: 50vw;
+      margin-top: 0;
+      padding-left: 100px;
+      padding-top: -100px;
+      padding-right: 1em;
+     
+   }
+    
+ }
+
+ .main{
+    padding-block: 1vw;
+ }
+ .container{
+  padding-inline: 10px;
+  padding-top: -25px;
+   
+    
+ }
+.btn{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 10vw;
+    height: 5vh;
+   margin-top: 3em;
+   background-color: #ff1b1c;
+   color: white;
+border: none;
+margin: 5px;
+}
+.btn:hover{
+  background-color: #ce0303;
+}
+.title{
+    color: #ff1b1c;
+    text-shadow: 0px 1px 1px rgb(176, 169, 169);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+    top: 50px;
+    
+}
+.info{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  margin-right: 4px;
+}
+.custom-image{
+  
+  height: 0;
+  width: 80%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 1px solid rgb(176, 52, 52);
+
+  }
+  
+  
+}
+
+  @media screen and (max-width: 768px) {
+    .nav-item{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+    .btn{
+      display: none;
+    }
+    .second{
+      display: none;
+    }
+   .col2.gallery{
+    display: none;
+   }
+    
+  }
+  .icon-image.blend-in {
+    opacity: 2; transform: scale(1); 
+    height: 20px;
+    width: 20px;
+  }
+  
+  .icon-image.blend-out {
+    opacity: 1; transform: scale(0.6); 
+   
+  }
+ .recipe-image{
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+ 
+   padding-right: 10px;
+  justify-content: center;
+  position: absolute;
+  object-fit: cover;
+ 
+ }
+ .recipe-title{
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 30%;
+  bottom: 24%;
+  
+  transform: translate(-50%, 0%);
+  color: #000000;
+  object-fit: cover;
+  
+  font-size: 1rem;
+
+  font-family: "Montserrat", sans-serif;
+ }
+h2{
+  font-family: "Monda", sans-serif;
+  margin: 2rem 0rem;
+  font-size: 1em;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  color: #000000;
+}
+.popveg{
+  margin: 0% 20%;
+  align-items: center;
+  justify-content: center;
+  content: cover;
+}
+.rep{
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+}
+  
+.category {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 20vh; 
+
+ 
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #fffffc;
+
+}
+
+  .gallery{
+
+    display: grid;
+    grid-template-columns: repeat(3, 10fr);
+    gap: 1vw;
+    padding-top: 30px;
+    box-shadow: 1px solid rgb(176, 52, 52);
+    
+  
+  }
+  .Head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px; 
+  }
+  .heading {
+    margin: 0;
+    padding: 0;
+  }
+  .Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Adjust width as needed */
+  }
+.Explore{
+  color: #ff1b1c;
+  font-size: 2em;
+  padding-left: 10px;
+}
+span{
+  color: #000000;
+}
+span:hover{
+  color: rgb(57, 55, 55);
+}
+.Pick{
+  font-size: 1em;
+  padding-left: 20px;
+  font-weight: bold;
+}
+.cuisine-title{
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 30%;
+  bottom: 24%;
+  
+  transform: translate(-50%, 0%);
+  color: #000000;
+  object-fit: cover;
+  
+  font-size: 1rem;
+
+  font-family: "Montserrat", sans-serif;
+ }
+  .third{
+    height: 100vh;
+    width: 100vw;
+    padding-left: 40px;
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+ 
+ 
+  }
+  .second{
+    height: 100vh;
+    width: 100vw;
+    padding-left: 150px;
+    padding-top: 15px;
+   }

@@ -1,0 +1,18 @@
+@keyframes slideLeft{
+    from{
+         left: -250px;
+    }
+    to{
+      left: 0px;
+   }
+}
+@keyframes popOut{
+   from{
+      transform: scale(0);
+      opacity: 0;
+   }
+   to{
+      transform: scale(1);
+      opacity: 1;
+   }
+}
