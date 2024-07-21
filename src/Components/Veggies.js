@@ -40,7 +40,7 @@ const getVeggies = async () => {
             <Card>
                 
                 <p className='recipe-title' key={recipes.title}>{recipes.title}</p>
-                <Link to={'/recipeInfo/'+ recipes.title}>
+                <Link to={'/recipeInfo/'+ recipes.id}>
                 <img className='recipe-image' src= {recipes.image} alt={recipes.title}/>
                 </Link>
                 </Card>

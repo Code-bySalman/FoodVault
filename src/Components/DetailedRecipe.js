@@ -7,7 +7,7 @@ function DetailedRecipe() {
   const apiKey = 'b5a5570dd12a47459b906d82693d0f6b';
   const [details, setDetails] = useState({});
   const [activeTab, setActiveTab] = useState('instructions');
-
+  
   useEffect(() => {
     const fetchDetails = async () => {
       const data = await fetch(
