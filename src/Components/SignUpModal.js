@@ -29,7 +29,7 @@ const SignUpModal = ({ isOpen, onRequestClose }) => {
       contentLabel="Sign Up"
     >
       <Form onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
+        <h1>Sign Up!</h1>
         <label>
           Mobile Number:
           <input
@@ -70,7 +70,7 @@ const SignUpModal = ({ isOpen, onRequestClose }) => {
             required
           />
         </label>
-        <button type="submit" className="btn">Sign Up</button>
+        <button type="submit" className="btn" onClick={onRequestClose}>Sign Up</button>
       </Form>
     </Modal>
   );
@@ -91,22 +91,28 @@ const customStyles = {
 
 const Form = styled.form`
   display: flex;
+  width: 250px;
   flex-direction: column;
   gap: 1rem;
-  h2 {
+  h1 {
     margin-bottom: 1rem;
+    color:#ff1b1c
   }
   label {
     display: flex;
     flex-direction: column;
-    font-weight: bold;
+    font-weight: light;
+     font-family: Arial, Helvetica, sans-serif;
   }
   input {
-    padding: 0.7rem;
+    padding: 0.6rem;
     margin-top: 0.5rem;
+     font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 0.4px 0.5px 0.3px #B7B7B7;
+    font-size: 1rem;
   }
   button {
-    padding: 0.75rem;
+    padding: 0.5rem;
     background-color: #ff7f11;
     color: white;
     border: none;

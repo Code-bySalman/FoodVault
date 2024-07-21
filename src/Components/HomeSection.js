@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CustomImage from './CustomImage';
+import styled from 'styled-components';
+import { FaSearch } from "react-icons/fa";
+
 
 function HomeSection() {
   const navigate = useNavigate();
@@ -15,8 +18,14 @@ function HomeSection() {
     "/img/img_8.jpg",
     "/img/img_9.jpg",
   ]
+  const [input, setInput] = useState("");
+  const handleChange=(e)=>{
+    e.preventDefault();
+    navigate('searched/'+ input)
+  }
 
   return (
+    <>
     <div className="section">
       <div className="col1">
         <h2 className="title">Welcome! Let's Cook</h2>
@@ -40,8 +49,42 @@ function HomeSection() {
       
        
       </div>
+    
     </div>
+    <div>
+     
+      <SearchForm onSubmit={handleChange}>
+     <div className="search-button"><FaSearch onClick={handleChange}></FaSearch>
+      <SearchInput onChange={(e)=>{setInput(e.target.value)}} type="text" value={input}  placeholder='Search for recipes...' />
+      </div>
+    </SearchForm>
+    </div>
+    </>
   );
 }
 
+const SearchForm = styled.form`
+  width: 40vw;
+ 
+  height: 250px
+  display: flex;
+  justify-content: center;
+  margin-top: 25rem;
+  align-items: center;
+  border-radius:1rem
+ 
+  
+`;
+
+const SearchInput = styled.input`
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #beb7a4;
+  font-size: 1rem;
+  margin-left: -900px;
+ background-color: #beb7a4
+  background-gradient: (35deg, #beb7a4, #E1DED9)
+  box-shadow: 0px 0.2px 0.3px 0.5px #313131
+`;
 export default HomeSection;

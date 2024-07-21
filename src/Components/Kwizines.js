@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 function Cuisines() {
   const apiKey = 'b5a5570dd12a47459b906d82693d0f6b';
@@ -11,7 +10,7 @@ function Cuisines() {
   const getCuisine = async (name) => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&cuisine=${name}&number=12`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&cuisine=${name}&number=44`
       );
       const data = await response.json();
       setCuisine(data.results || []);
@@ -25,71 +24,54 @@ function Cuisines() {
   }, [params.type]);
 
   return (
-    <Wrapper>
-      <Heading>Here is your {params.type} Cuisine.</Heading>
-      <Splide
-        options={{
-          perPage: 4,
-          perMove: 4,
-          gap: '1rem',
-          arrows: true,
-          pagination: true,
-          breakpoints: {
-            1024: {
-              perPage: 2,
-              perMove: 2,
-            },
-            768: {
-              perPage: 1,
-              perMove: 1,
-            },
-          },
-        }}
-      >
+    <div>
+      <Heading>Here is your {params.type} Cuisine!</Heading>
+      <Grid>
         {cuisine.map((item) => (
-          <SplideSlide key={item.id}>
-            <Card>
-              <img src={item.image} alt={item.title} />
-              <h4>{item.title}</h4>
-            </Card>
-          </SplideSlide>
+          <Card key={item.id}>
+            <img src={item.image} alt={item.title} />
+            <h4>{item.title}</h4>
+          </Card>
         ))}
-      </Splide>
-    </Wrapper>
+      </Grid>
+    </div>
   );
 }
 
-const Wrapper = styled.div`
-  margin: 4rem 0;
-  align-items: center;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 2rem;
+  justify-items: center; 
+  margin-left: 50px;
 `;
 
 const Card = styled.div`
+    width: 350px;
+    height: 300px;
   img {
-    width: 100%;
+    width: 80%;
     border-radius: 2rem;
+    display:cover;
+
   }
-  height: 60vh; 
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
+  a {
+    text-decoration: none;
+  }
   h4 {
     text-align: center;
     padding: 1rem;
+    margin-right:60px;
   }
 `;
 
 const Heading = styled.h2`
-  margin: 0;
   text-align: center;
-  justify-content: center;
-  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
   color: #ce0303;
-  padding-right: 100px;
-  padding-left: 0px;
+  margin-left: -90px
 `;
 
 export default Cuisines;
+

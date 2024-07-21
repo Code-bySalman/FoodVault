@@ -10,7 +10,7 @@ const SideBar = ({ links, close }) => {
           className="sidebar-link" 
           to={link.path} 
           key={link.name} 
-          onClick={close} // Close sidebar on link click
+          onClick={close} 
         >
           <FontAwesomeIcon icon={link.icon} />
           {link.name}

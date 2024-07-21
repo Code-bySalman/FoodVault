@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPizzaSlice, faHamburger,  faFish, faCarrot } from '@fortawesome/free-solid-svg-icons';
 import { GiSushis } from "react-icons/gi";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Recipies() {
   const apiKey = 'b5a5570dd12a47459b906d82693d0f6b';
@@ -17,10 +18,9 @@ function Recipies() {
   }, []);
 
   const getRecipies = async () => {
-    const check = localStorage.getItem('recipes');
-    if (check !== null && check !== undefined) {
-      setPopular(JSON.parse(check));
-    } else {
+    .instruction{
+      margin-left: -90px;
+    }
       const api = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=12`
       );
@@ -58,12 +58,15 @@ function Recipies() {
         </Menu>
       </HeaderSection>
       <RecipeSection>
-        <Splide options={{ perPage: 5, gap: '3rem', arrows: true, pagination: false }}>
+        <Splide options={{ perPage: 3, gap: '2rem', arrows: false, pagination: false }}>
           {popular.map((recipe) => (
             <SplideSlide key={recipe.id}>
               <Card>
-                <RecipeTitle>{recipe.title}</RecipeTitle>
-                <RecipeImage src={recipe.image} alt={recipe.title} />
+              
+              <p className="recipe-title2" key={recipe.title}>{recipe.title}</p>
+                  <Link to={'/recipeInfo/'+ recipe.id}>
+                  <img className='recipe-image2' src= {recipe.image} alt={recipe.title}/>
+                </Link>
               </Card>
             </SplideSlide>
           ))}
@@ -75,17 +78,27 @@ function Recipies() {
 
 const Container = styled.div`
   margin: 4rem 0;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  
 `;
 
 const HeaderSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-top: -4rem;
 `;
 
 const Heading = styled.h2`
-  margin: 0;
+  margin-bottom: 100px;
+  margin-top : 3rem;
+  margin-left: 0px;
+  height: 5vh;
+
  
   
 `;
@@ -95,6 +108,14 @@ const Menu = styled.div`
   background-color: #f9721f;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   padding: 1rem;
+  display: flex;
+  padding-right: 90px;
+  margin-bottom:  200px;
+  justify-content: top; 
+  align-items: top;
+  margin-right: 400px;
+  border-radius: 2rem;
+  
 `;
 
 const MenuItem = styled.div`
@@ -104,6 +125,8 @@ const MenuItem = styled.div`
   font-size: 1.2rem;
   cursor: pointer;
   color: #beb7a4
+
+   
 
   span {
     margin-left: 0.5rem;
@@ -115,7 +138,7 @@ const MenuItem = styled.div`
 `;
 
 const RecipeSection = styled.div`
-  width: 100%;
+ margin-top: -100px;
 `;
 
 const Card = styled.div`
@@ -124,16 +147,15 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 30vh;
+  padding-top: -290px
+  margin-bottom: 20px
+ 
+ 
 `;
 
-const RecipeTitle = styled.p`
-  margin: 10px 0;
-`;
 
-const RecipeImage = styled.img`
-  width: 100%;
-  height: auto;
-`;
+
 
 export default Recipies;
 

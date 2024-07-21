@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import styled from "styled-components";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+import { Link } from 'react-router-dom';
 
 function Veggies() {
     const apiKey = 'b5a5570dd12a47459b906d82693d0f6b';
@@ -27,9 +28,9 @@ const getVeggies = async () => {
      <Wrapper>
         <Heading>Our Vegetarian Picks</Heading>
         <Splide options={{
-          perPage: 5,
-          gap: "3rem",
-          arrows: true,
+          perPage: 3,
+          gap: "0.5rem",
+          arrows: false,
           pagination: false,
         
         }}>
@@ -39,8 +40,9 @@ const getVeggies = async () => {
             <Card>
                 
                 <p className='recipe-title' key={recipes.title}>{recipes.title}</p>
-                
+                <Link to={'/recipeInfo/'+ recipes.title}>
                 <img className='recipe-image' src= {recipes.image} alt={recipes.title}/>
+                </Link>
                 </Card>
                 </SplideSlide>
                 
@@ -53,11 +55,13 @@ const getVeggies = async () => {
   );
 }
  const Wrapper = styled.div`
+ paddin-top: 20px;
   margin: 4rem 0rem;
  `;
  const Card = styled.div`
- height: 20vh;
- width: 30vw
+ margin-top:20px
+ height: 30vh;
+ width: 40vw
  margin: 10px
 display:flex
 position: relative
@@ -67,6 +71,7 @@ display:block`
 
 const Heading = styled.h2`
   margin: 0;
+  margin-top: -25rem;
 
 `;
 

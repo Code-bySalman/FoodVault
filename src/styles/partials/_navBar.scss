@@ -18,6 +18,9 @@
 }
 .brand:hover{
     color: #faa916  ;
+    .sss{
+        color: #000000;
+    }
 }
 
 .sss{
@@ -88,6 +91,7 @@ padding: 0.8em 1em;
 border-left: .2em solid rgb(254, 254, 254);
 margin-bottom: 1em;
 text-decoration: none;
+font-size: 1rem;
 
 
 &.active{

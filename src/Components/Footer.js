@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterLink href="https://www.linkedin.com/in/salman-usmani" target="_blank" rel="noopener noreferrer">
+      <FooterLink href="https://www.linkedin.com/in/salman-usmani-184185262/" target="_blank" rel="noopener noreferrer">
         Designed by: Salman Usmani
       </FooterLink>
       <FooterLink href="mailto:report@flavourvault.com">Report a Bug</FooterLink>

@@ -59,7 +59,7 @@ export default function NavBar() {
       <div className="navbar">
         <Link to="/" className="brand">Flavour<span className='sss'>Vault</span></Link>
         <div className="nav-links">
-          <button className="btn" onClick={openSignUpModal}>Sign Up</button> {/* Open modal instead of navigate */}
+          <button className="btn" onClick={openSignUpModal}>Sign Up</button> 
           <SignUpModal isOpen={isSignUpModalOpen} onRequestClose={closeSignUpModal} />
           {links.map(link => (
             <Link to={link.path} key={link.name}>{link.name}</Link>
