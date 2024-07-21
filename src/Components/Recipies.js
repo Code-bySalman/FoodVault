@@ -18,9 +18,7 @@ function Recipies() {
   }, []);
 
   const getRecipies = async () => {
-    .instruction{
-      margin-left: -90px;
-    }
+   
       const api = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=12`
       );
@@ -28,7 +26,7 @@ function Recipies() {
       localStorage.setItem('recipes', JSON.stringify(data.recipes));
       setPopular(data.recipes);
     }
-  };
+  
 
   return (
     <Container>
