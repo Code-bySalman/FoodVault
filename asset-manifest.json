@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/FoodVault/static/css/main.b6d43df0.css",
-    "main.js": "/FoodVault/static/js/main.81aa459d.js",
+    "main.css": "/FoodVault/static/css/main.af32f6d6.css",
+    "main.js": "/FoodVault/static/js/main.9211c1ef.js",
     "static/media/multiply.jpg": "/FoodVault/static/media/multiply.e6679df2f2411fdcf571.jpg",
     "index.html": "/FoodVault/index.html",
-    "main.b6d43df0.css.map": "/FoodVault/static/css/main.b6d43df0.css.map",
-    "main.81aa459d.js.map": "/FoodVault/static/js/main.81aa459d.js.map"
+    "main.af32f6d6.css.map": "/FoodVault/static/css/main.af32f6d6.css.map",
+    "main.9211c1ef.js.map": "/FoodVault/static/js/main.9211c1ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6d43df0.css",
-    "static/js/main.81aa459d.js"
+    "static/css/main.af32f6d6.css",
+    "static/js/main.9211c1ef.js"
   ]
 }
