@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CustomImage from './CustomImage';
 import styled from 'styled-components';
@@ -6,18 +6,22 @@ import { FaSearch } from "react-icons/fa";
 
 
 function HomeSection() {
+  const apiKey = 'b5a5570dd12a47459b906d82693d0f6b';
+  const [random, setRandom] = useState([]);
   const navigate = useNavigate();
-  const images =[
-    "img/img_1.jpg",
-    "img/img_2.jpg",
-    "img/img_3.jpg",
-    "img/img_4.jpg",
-    "img/img_5.jpg",
-    "img/img_6.jpg",
-    "img/img_7.jpg",
-    "img/img_8.jpg",
-    "img/img_9.jpg",
-  ]
+  useEffect(() => {
+    getRecipies();
+  }, []);
+
+  const getRecipies = async () => {
+   
+    const api = await fetch(
+      `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=9`
+    );
+    const data = await api.json();
+    localStorage.setItem('recipes', JSON.stringify(data.recipes));
+    setRandom(data.recipes);
+  }
   const [input, setInput] = useState("");
   const handleChange=(e)=>{
     e.preventDefault();
@@ -41,8 +45,8 @@ function HomeSection() {
         </button>
       </div>
       <div className="col2 gallery">
-           {images.map((src, index) =>(
- <CustomImage key={index} Imgsrc={src} pt={"35%"}/>
+           {random.map((recipe) =>(
+ <CustomImage key={recipe.id} Imgsrc= {recipe.image} alt={recipe.title} pt={"25%"}/>
            )
 
            )}
