@@ -45,7 +45,7 @@ function HomeSection() {
         </button>
       </div>
       <div className="col2 gallery">
-           {random.map((recipe) =>(
+           {random?.map((recipe) =>(
  <CustomImage key={recipe.id} Imgsrc= {recipe.image} alt={recipe.title} pt={"25%"}/>
            )
 
@@ -58,7 +58,7 @@ function HomeSection() {
     <div>
      
       <SearchForm onSubmit={handleChange}>
-     <div className="search-button"><FaSearch onClick={handleChange}></FaSearch>
+     <div className="search-button">
       <SearchInput onChange={(e)=>{setInput(e.target.value)}} type="text" value={input}  placeholder='Search for recipes...' />
       </div>
     </SearchForm>
@@ -86,7 +86,7 @@ const SearchInput = styled.input`
   border-radius: 5px;
   border: 1px solid #beb7a4;
   font-size: 1rem;
-  margin-left: -900px;
+  margin-left: -950px;
  background-color: #beb7a4
   background-gradient: (35deg, #beb7a4, #E1DED9)
   box-shadow: 0px 0.2px 0.3px 0.5px #313131

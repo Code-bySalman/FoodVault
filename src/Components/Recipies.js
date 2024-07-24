@@ -57,7 +57,7 @@ function Recipies() {
       </HeaderSection>
       <RecipeSection>
         <Splide options={{ perPage: 3, gap: '2rem', arrows: false, pagination: false }}>
-          {popular.map((recipe) => (
+          {popular?.map((recipe) => (
             <SplideSlide key={recipe.id}>
               <Card>
               

@@ -7,6 +7,7 @@ import Searched from './Components/Searched';
 import Explore from './Components/Explore'; 
 import Footer from './Components/Footer';
 import DetailedRecipe from './Components/DetailedRecipe';
+import ContactUs from './Components/ContactUs';
 
 function App() {
 return (
@@ -16,10 +17,11 @@ return (
     <div className="container main">
     <Routes>
       <Route path='/' element={<HomeSection />} />
-        <Route path='/explore' element={<Explore />} /> 
+        <Route path="/explore" element={<Explore />} /> 
         <Route path='/kwizine/:type' element={<Kwizines />} /> 
         <Route path='/searched/:search' element={<Searched/>}/>
         <Route path='/recipeInfo/:name' element={<DetailedRecipe/>}/>
+        <Route path='/contact' element={<ContactUs/>}/>
       </Routes>
        
         </div>

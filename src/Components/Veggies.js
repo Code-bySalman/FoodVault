@@ -55,8 +55,8 @@ const getVeggies = async () => {
   );
 }
  const Wrapper = styled.div`
- paddin-top: 20px;
-  margin: 4rem 0rem;
+ paddin-top: 10px;
+  margin: 7rem 0rem;
  `;
  const Card = styled.div`
  margin-top:20px

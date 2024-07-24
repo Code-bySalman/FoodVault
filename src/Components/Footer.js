@@ -7,7 +7,7 @@ const Footer = () => {
       <FooterLink href="https://www.linkedin.com/in/salman-usmani-184185262/" target="_blank" rel="noopener noreferrer">
         Designed by: Salman Usmani
       </FooterLink>
-      <FooterLink href="mailto:report@flavourvault.com">Report a Bug</FooterLink>
+     
     </FooterContainer>
   );
 };
@@ -26,6 +26,7 @@ const FooterContainer = styled.footer`
 const FooterLink = styled.a`
   color: #fff;
   text-decoration: none;
+  margin-left: 600px;
   &:hover {
     text-decoration: underline;
   }

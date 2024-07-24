@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Cuisines() {
   const apiKey = 'b5a5570dd12a47459b906d82693d0f6b';
@@ -13,6 +14,7 @@ function Cuisines() {
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&cuisine=${name}&number=44`
       );
       const data = await response.json();
+      localStorage.setItem("cuisine", JSON.stringify(data.recipes));
       setCuisine(data.results || []);
     } catch (error) {
       console.error('Error fetching the cuisine:', error);
@@ -29,7 +31,9 @@ function Cuisines() {
       <Grid>
         {cuisine.map((item) => (
           <Card key={item.id}>
+              <Link to={'/recipeInfo/'+ item.id}>
             <img src={item.image} alt={item.title} />
+            </Link>
             <h4>{item.title}</h4>
           </Card>
         ))}

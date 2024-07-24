@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import SideBar from './SideBar';
 import Icon1 from '../assets/side-menu.jpg';
 import Icon2 from '../assets/multiply.jpg';
-import { faHome, faList, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faList, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SignUpModal from './SignUpModal';
 
 export default function NavBar() {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
-  
 
   const openSignUpModal = () => {
     setIsSignUpModalOpen(true);
@@ -44,9 +44,9 @@ export default function NavBar() {
       icon: faList
     },
     {
-      name: "Settings",
-      path: "/settings",
-      icon: faCog
+      name: "Contact Us",
+      path: "/contact",
+      icon: faPhone
     }
   ];
 
@@ -62,7 +62,10 @@ export default function NavBar() {
           <button className="btn" onClick={openSignUpModal}>Sign Up</button> 
           <SignUpModal isOpen={isSignUpModalOpen} onRequestClose={closeSignUpModal} />
           {links.map(link => (
-            <Link to={link.path} key={link.name}>{link.name}</Link>
+            <Link to={link.path} key={link.name} className="nav-link">
+              <FontAwesomeIcon icon={link.icon} style={{ marginRight: '8px' }} />
+              {link.name}
+            </Link>
           ))}
         </div>
         <div className="nav-item">
@@ -87,4 +90,3 @@ export default function NavBar() {
     </>
   );
 }
-
