@@ -4,7 +4,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPizzaSlice, faHamburger,  faBowlRice, faCarrot, faUserNinja } from '@fortawesome/free-solid-svg-icons';
-import { GiSushis } from "react-icons/gi";
+
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
