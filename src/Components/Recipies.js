@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPizzaSlice, faHamburger,  faFish, faCarrot } from '@fortawesome/free-solid-svg-icons';
+import { faPizzaSlice, faHamburger,  faBowlRice, faCarrot, faUserNinja } from '@fortawesome/free-solid-svg-icons';
 import { GiSushis } from "react-icons/gi";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -42,11 +42,11 @@ function Recipies() {
             <span>American</span>
           </MenuItem>
           <MenuItem onClick={() => navigate("/Kwizine/Japanese ")}>
-            <FontAwesomeIcon className="menu" icon={GiSushis} />
+            <FontAwesomeIcon className="menu" icon={faUserNinja} />
             <span>Japanese</span>
           </MenuItem>
           <MenuItem onClick={() => navigate("/Kwizine/Indian")}>
-            <FontAwesomeIcon className="menu" icon={faFish} />
+            <FontAwesomeIcon className="menu" icon={faBowlRice} />
             <span>Indian</span>
           </MenuItem>
           <MenuItem onClick={() => navigate("/Kwizine/Middle Eastern")}>
