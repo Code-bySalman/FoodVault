@@ -274,14 +274,14 @@ span:hover{
    }
   .search-button{
     position: relative;
-    display: flex;
+    display: inline-block;
     align-items: center;
   }
   .search-button .logo {
-    position: absolute;
-    left: 10px; /* Adjust this value as needed */
+    position: relative;
+    left: 10px; 
     color: #313131;
-    pointer-events: none; /* Ensures clicks go through to the input field */
+    pointer-events: none; 
   }
   .recipe-image2{
     border-radius: 2rem;
