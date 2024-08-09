@@ -61,7 +61,7 @@ const getVeggies = async () => {
  const Card = styled.div`
  margin-top:20px
  height: 30vh;
- width: 40vw
+ width: 100%;
  margin: 10px
 display:flex
 position: relative
