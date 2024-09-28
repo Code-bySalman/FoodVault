@@ -75,15 +75,15 @@ function Recipies() {
 }
 
 const Container = styled.div`
-  margin: 4rem 0;
+  margin: 2rem 0;
+  margin-top: -10px
   display: block;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
     margin: 0;
-  padding: 0;
-  width: 100%;
+
    overflow-x: hidden; 
   
 `;
@@ -150,8 +150,8 @@ const Card = styled.div`
   align-items: center;
   width: 100%;
   height: 30vh;
-  padding-top: -290px
-  margin-bottom: 20px
+  padding-top: -290px;
+  margin-bottom: 20px;
  
  
 `;
