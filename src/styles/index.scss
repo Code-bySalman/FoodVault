@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- 
+
 }
 
 body{
@@ -11,10 +11,7 @@ body{
     font-family: "Roboto", sans-serif;
     background: linear-gradient(20deg, #DBDBD3, #F4F4EE);
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
+    margin: 0%
      
       
 }
@@ -29,7 +26,6 @@ body{
     margin-top: 0;
     height: 40vh;
     width: 90vw;
-    
    
     .col1{
         width: 50vw;
@@ -99,8 +95,8 @@ margin: 5px;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vw;
-    width: 100vh;
+    height: 100%;
+    width: 100%;
     border-radius: 15px;
     object-fit: cover;
     box-shadow: 1px solid rgb(176, 52, 52);
@@ -140,33 +136,32 @@ margin: 5px;
   }
  .recipe-image{
   border-radius: 2rem;
-  height: 70%;
-  width: 70%;
-  padding-top: 5px;
-   gap: -10px;
-  justify-content: center;
-  margin-left: 50px;
-  object-fit: cover;
-  margin-right: 15px;
- 
- }
- .recipe-title{
-  position: relative;
-  z-index: 5;
-  left: 50%;
-  top: 0px;
-  bottom: 4%;
-  padding-left: -50px;
-  margin-bottom: 10px;
-  transform: translate(-50%, 0%);
-  color: #000000;
-  object-fit: cover;
-  margin-left: 50px;
-  font-size: 1rem;
-  margin-right: 5px;
+    height: 90%;
+    width: 90%;
+    padding-top: 5px;
+   margin-left: 30px;
+    justify-content: center;
+    margin-left: 10px;
+    object-fit: cover;
+   
+   }
+   .recipe-title{
+    position: relative;
+    z-index: 5;
+    left: 50%;
+    top: 0px;
+    bottom: 4%;
+    padding-left: -50px;
+    margin-bottom: 10px;
+    transform: translate(-50%, 0%);
+    color: #000000;
+    object-fit: cover;
+    margin-left: 50px;
+    font-size: 1rem;
+  
+    font-family: "Montserrat", sans-serif;
+   }
 
-  font-family: "Montserrat", sans-serif;
- }
 h2{
   font-family: "Monda", sans-serif;
   margin:  0rem;
